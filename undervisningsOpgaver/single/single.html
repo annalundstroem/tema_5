@@ -1,0 +1,83 @@
+   <!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #singleview {
+            background-color: aqua;
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+
+        #luk {
+            box-sizing: border-box;
+            text-align: right;
+            padding-right: 1em;
+        }
+
+        #luk button {
+            font-size: 2em;
+        }
+
+
+        #indhold {
+            box-sizing: border-box;
+            background-color: blueviolet;
+            width: 90vw;
+            height: 90vh;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="singleview">
+
+        <div id="luk"><button>X</button></div>
+        <div id="indhold"></div>
+
+
+    </div>
+
+
+    <footer></footer>
+
+
+    <script>
+        let personer = [];
+        let person;
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            let dest = document.querySelector("#liste");
+            async function getJson() {
+                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1OLlD_GRoz71piHvnW306omRAyHS7vtLOILQt-K0YF_c");
+                personer = await jsonData.json();
+
+            }
+
+            aabn();
+
+        }
+
+        function aabn() {
+
+        }
+
+
+
+        getJson();
+        }
+    </script>
+</body>
+
+</html>
+
