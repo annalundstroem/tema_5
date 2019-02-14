@@ -26,7 +26,6 @@
         nav {
             text-align: center;
         }
-
     </style>
 </head>
 
@@ -48,7 +47,6 @@
 
     <section id="liste">
         <article class="person"></article>
-
     </section>
 
     <footer></footer>
@@ -91,7 +89,7 @@
                     `;
                         dest.insertAdjacentHTML("beforeend", template);
                         dest.lastElementChild.addEventListener("click", () => {
-                            location.href = "06-single.html?github=" + person.github;
+                            location.href = "07-singleView.html?github=" + person.github;
                         });
 
                     }
@@ -117,10 +115,8 @@
 
 
 
-
             getJson();
         }
-
     </script>
 </body>
 

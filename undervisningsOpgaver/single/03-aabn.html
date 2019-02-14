@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="">
 
 <head>
@@ -55,9 +55,6 @@
             margin: auto;
         }
 
-        html {
-            overflow-y: hidden;
-        }
     </style>
 </head>
 
@@ -134,14 +131,14 @@
 
                         function aabn() {
                             document.querySelector("#indhold").innerHTML = `
-                                <article class="person">
-                                <h2>${person.navn}</h2>
-                                <img class="billede" src="${person.billede}" alt="${person.navn}">
-                                <p>Hold: ${person.hold}, Alder:${person.alder} </p>
-                                <h3>${person.navn}'s historie</h3>
-                                <p>${person.historie} </p>
-                            </article>
-                        `;
+<article class="person">
+    <h2>${person.navn}</h2>
+    <img class="billede" src="${person.billede}" alt="${person.navn}">
+    <p>Hold: ${person.hold}, Alder:${person.alder} </p>
+    <h3>${person.navn}'s historie</h3>
+    <p>${person.historie} </p>
+</article>
+`;
 
                             document.querySelector("#popup").style.display = "block";
 
@@ -173,8 +170,8 @@
 
             getJson();
         }
+
     </script>
 </body>
 
 </html>
-

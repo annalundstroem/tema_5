@@ -26,22 +26,23 @@
         nav {
             text-align: center;
         }
+
     </style>
 </head>
 
 <body>
 
+    <header>
+        <nav>
 
-    <nav>
+            <h1></h1>
 
-        <h1></h1>
+            <button class="filter" data-hold="alle">Alle</button>
+            <button class="filter" data-hold="a">Hold A</button>
+            <button class="filter" data-hold="b">Hold B</button>
 
-        <button class="filter" data-hold="alle">Alle</button>
-        <button class="filter" data-hold="a">Hold A</button>
-        <button class="filter" data-hold="b">Hold B</button>
-
-    </nav>
-
+        </nav>
+    </header>
 
     <section id="liste">
         <article class="person"></article>
@@ -112,6 +113,7 @@
 
             getJson();
         }
+
     </script>
 </body>
 

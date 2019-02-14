@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistro Babushka</title>
+    <style>
+        body {
+            background-color: #d6c7a0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        body {
+            margin: auto;
+        }
+
+        .ret {
+            background-color: #e0d6bc;
+            margin: 2vw;
+
+        }
+
+        #liste {
+            background-color: #d6c7a0;
+            display: grid;
+            grid-template-columns: 10fr 10fr 10fr 10fr;
+        }
+
+        .valgt {
+            background-color: #d9d7d7;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <h1>Bistro Barbushka</h1>
+
+    <header>
+
+        <nav>
+            <button class="filter" data-kategori="alle">Alle</button>
+            <button class="filter" data-kategori="forretter">Forretter</button>
+            <button class="filter" data-kategori="hovedretter">Hovedretter</button>
+            <button class="filter" data-kategori="desserter">Desserter</button>
+            <button class="filter" data-kategori="sideorders">Sideorders</button>
+            <button class="filter" data-kategori="drikkevarer">Drikkevarer</button>
+
+
+        </nav>
+    </header>
+
+    <section id="liste">
+        <article class="ret"></article>
+    </section>
+
+
+
+    <footer></footer>
+
+
+    <script>
+        let retter = [];
+        let filter = "alle";
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            let dest = document.querySelector("#liste");
+            async function getJson() {
+                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1jxxxFoWBuMJ1qhQ9BQIAyKHmP38XtAF9_sQr0xo5JLo");
+                retter = await jsonData.json();
+                retter.sort((a, b) => {
+                    return a.navn.localeCompare(b.navn);
+                })
+
+                visRetter();
+            }
+
+            function visRetter() {
+                dest.innerHTML = "";
+                retter.forEach(ret => {
+                    if (filter == "alle" || filter == ret.kategori) {
+
+                        let template = `
+                            <div class="ret">
+                                <h2>${ret.navn}</h2> <br>
+                                <p>Ret nr: ${ret.id}</p> <br>
+                                <img src = "small/${ret.billede}-sm.jpg">
+                                <p>Pris: ${ret.pris}</p>
+                                <p>Kort beskrivelse: ${ret.kort}</p>
+                                <p>Oprindelse: ${ret.oprindelse}</p>
+
+                           </div>
+                    `;
+                        dest.insertAdjacentHTML("beforeend", template);
+                        dest.lastElementChild.addEventListener("click", () => {
+                            location.href = "singleViewBabushka.html?id=" + ret.id;
+                        });
+
+                    }
+                })
+
+            }
+
+            //fuction visPersoner slut
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+
+            function filtrering() {
+                filter = this.getAttribute("data-kategori");
+                document.querySelector("h1").textContent = this.textContent;
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                })
+                this.classList.add("valgt");
+                visRetter();
+            }
+
+
+
+
+            getJson();
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>
