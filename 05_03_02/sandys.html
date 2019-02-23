@@ -9,24 +9,14 @@
     <style>
         body {
             margin: 0;
-            /*            background-color: #3f4543;*/
+            background-image: url("pics/rolerblades2.png");
+            background-size: cover;
+            background-repeat: repeat-y;
+            position: absolute;
         }
 
         img {
             width: 100%;
-        }
-
-        #baggrundsbillede {
-            background-image: url("pics/bus.jpg");
-            filter: opacity(40%);
-            height: 100vh;
-            width: 100vw;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-
-
         }
 
         #logo {
@@ -39,32 +29,19 @@
 
         }
 
-        #sandys {
-            display: block;
-            margin-right: auto;
-            width: 25%;
+        nav {
+            display: flex;
             position: relative;
-            top: 10vh;
-            left: 5vw;
+
         }
 
-        #menu {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        .knap {
             width: 25%;
-            position: relative;
-            top: 2.9vh;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 9vh;
         }
 
-        #kontakt {
-            display: block;
-            margin-left: auto;
-            width: 25%;
-            position: relative;
-            top: -4.1vh;
-            right: 5vw;
-        }
 
         /*
         #sectionswrapper {
@@ -80,6 +57,7 @@
             position: relative;
             margin-left: auto;
             margin-right: auto;
+            margin-top: 5vh;
             padding: 4vw;
             padding-bottom: 10vw;
             margin-bottom: 5vh;
@@ -88,41 +66,42 @@
         .overskrift {
             text-align: center;
             font-family: 'Allura', cursive, sans-serif;
-            font-size: 1.5rem;
+            font-size: 2em;
         }
 
         p {
             font-family: 'Shadows Into Light', cursive;
-            font-size: 0.8em;
+            font-size: 1.2em;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <div id="baggrundsbillede"></div>
 
     <div id="logo">
         <img src="SVG/logo.svg" alt="logo">
     </div>
 
-    <div id="sandys">
-        <img src="SVG/sandys-pink.svg" alt="sandys">
-    </div>
+    <nav>
+        <div class="knap">
+            <img src="SVG/sandys-pink.svg" alt="sandys">
+        </div>
 
-    <div id="menu">
-        <img src="SVG/menu.svg" alt="menu">
-    </div>
+        <div class="knap">
+            <img src="SVG/menu.svg" alt="menu">
+        </div>
 
-    <div id="kontakt">
-        <img src="SVG/kontakt.svg" alt="kontakt">
-    </div>
-
+        <div class="knap">
+            <img src="SVG/kontakt.svg" alt="kontakt">
+        </div>
+    </nav>
 
     <div id="sectionwrapper">
 
         <div class="ramme">
-            <!--            <div class="overskrift">Om Sandy's Diner</div>-->
-            <p>Sandy's Diner er en klassisk amerikansk diner. Vi blev grundlagt i 1955. Vi serverer blandt andet burgers, fries og milkshakes.</p>
+            <div class="overskrift">Om os</div>
+            <p>Sandy's Diner er en klassisk amerikansk diner. Vi blev grundlagt i 1955. Vi serverer blandt andet burgers, fries og milkshakes. Vi glæder os til at byde Jer velkommen her hos os!</p>
 
         </div>
 

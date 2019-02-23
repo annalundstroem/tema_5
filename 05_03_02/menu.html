@@ -9,25 +9,32 @@
     <style>
         body {
             margin: 0;
-            /*background-color: #3f4543;*/
+            background-image: url("pics/bus3.png");
+            background-size: cover;
+            background-repeat: repeat-y;
+            position: absolute;
+
         }
 
         img {
             width: 100%;
+
         }
 
+        /*
         #baggrundsbillede {
-            background-image: url("pics/bus.jpg");
+            background-image: url("pics/bus2.jpg");
             filter: opacity(40%);
-            height: 100vh;
             width: 100vw;
+            height: 100vh;
             background-position: center;
-            background-repeat: no-repeat;
+            background-repeat: repeat-y;
             background-size: cover;
             position: absolute;
 
 
         }
+*/
 
         #logo {
             display: block;
@@ -39,32 +46,20 @@
 
         }
 
-        #sandys {
-            display: block;
-            margin-right: auto;
-            width: 25%;
+        nav {
+            display: flex;
             position: relative;
-            top: 10vh;
-            left: 5vw;
+
+
         }
 
-        #menu {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        .knap {
             width: 25%;
-            position: relative;
-            top: 2.9vh;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 9vh;
         }
 
-        #kontakt {
-            display: block;
-            margin-left: auto;
-            width: 25%;
-            position: relative;
-            top: -4.1vh;
-            right: 5vw;
-        }
 
         /*
         #sectionswrapper {
@@ -83,6 +78,7 @@
             padding: 4vw;
             padding-bottom: 10vw;
             margin-bottom: 5vh;
+            margin-top: 5vh;
         }
 
         .sortering {
@@ -90,8 +86,26 @@
             font-family: 'Shadows Into Light', cursive;
             font-size: 1.5rem;
         }
+
+        /* On screens that are 992px or less, set the background color to blue */
+        @media screen and (min-width: 768px) {
+
+            #logo {
+                width: 40%;
+            }
+
+            nav {
+                display: flex;
+            }
+
+            #sectionwrapper {
+                display: flex;
+            }
+        }
     </style>
+
 </head>
+
 
 <body>
     <div id="baggrundsbillede"></div>
@@ -100,28 +114,33 @@
         <img src="SVG/logo.svg" alt="logo">
     </div>
 
-    <div id="sandys">
-        <img src="SVG/sandys.svg" alt="sandys">
-    </div>
+    <nav>
 
-    <div id="menu">
-        <img src="SVG/menu-pink.svg" alt="menu">
-    </div>
+        <div class="knap">
+            <img src="SVG/sandys.svg" alt="sandys">
+        </div>
 
-    <div id="kontakt">
-        <img src="SVG/kontakt.svg" alt="kontakt">
-    </div>
+        <div class="knap">
+            <img src="SVG/menu-pink.svg" alt="menu">
+        </div>
+
+        <div class="knap">
+            <img src="SVG/kontakt.svg" alt="kontakt">
+        </div>
+
+    </nav>
+
 
 
     <div id="sectionwrapper">
 
         <div class="ramme">
 
-            <div class="madbillede">
+            <div class="sortering">All</div>
 
-                <img src="pics/burger.jpg" alt="burger">
+        </div>
 
-            </div>
+        <div class="ramme">
 
             <div class="sortering">Mains</div>
 
@@ -129,37 +148,17 @@
 
         <div class="ramme">
 
-            <div class="madbillede">
-
-                <img src="pics/fries.jpg" alt="fries">
-
-            </div>
-
             <div class="sortering">Sides</div>
 
         </div>
 
         <div class="ramme">
 
-            <div class="madbillede">
-
-                <img src="pics/milkshake.jpg" alt="milkshake">
-
-            </div>
-
             <div class="sortering">Drinks</div>
 
         </div>
 
     </div>
-
-
-
-
-
-
-
-
 
 
 </body>
