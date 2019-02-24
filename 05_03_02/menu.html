@@ -23,7 +23,19 @@
 
         h1 {
             text-align: center;
-            font-size: 3em;
+            font-size: 2em;
+            font-family: 'Allura', cursive;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Shadows Into Light', cursive;
+
+        }
+
+        p {
+            font-family: 'Shadows Into Light', cursive;
+            text-align: center;
         }
 
 
@@ -52,6 +64,7 @@
         }
 
 
+        /*
         .ramme {
             background-color: white;
             height: auto;
@@ -64,18 +77,30 @@
             margin-bottom: 5vh;
             margin-top: 5vh;
         }
+*/
+        #sectionwrapper {
+            display: flex;
+            justify-content: center;
+
+        }
 
         .sortering {
             text-align: center;
             font-family: 'Shadows Into Light', cursive;
             font-size: 1.5rem;
+            margin-top: 5vh;
+        }
+
+        button {
+            background-color: white;
+
         }
 
         #popup {
             position: fixed;
             width: 100vw;
             height: 100vh;
-            background-color: rgba(224, 214, 188, 0.33);
+            background-color: rgba(255, 255, 255, 0.26);
             display: none;
             z-index: 1;
         }
@@ -94,13 +119,23 @@
             margin: auto;
             width: 70vw;
             height: auto;
-            background-color: #e0d6bc;
+            background-color: #F1C3DB;
+            padding: 1vw;
+        }
+
+        #indhold img {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
         }
 
         #liste {
-            background-color: #d6c7a0;
+            background-color: white;
+            /*
             display: grid;
             grid-template-columns: 10fr 10fr 10fr 10fr;
+*/
         }
 
         /* iPad - On screens that are 768px or more */
@@ -132,25 +167,33 @@
                 width: 10%;
             }
 
-            #sectionwrapper {
-                display: flex;
-                justify-content: center;
+            #liste {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            #liste img {
+                width: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
 
             }
 
-            .ramme {
-                width: 20vw;
-                padding: 2vw;
-                height: 15vh;
-
+            h2 {
+                margin-bottom: 0;
             }
 
-            .overskrift {
+            #popup img {
+                width: 30%;
+            }
+
+            #popup h2 {
                 font-size: 2.5em;
             }
 
-
         }
+
     </style>
 
 </head>
@@ -163,7 +206,7 @@
         <div id="indhold"></div>
     </div>
 
-    <h1>Bistro Barbushka</h1>
+
 
     <div id="logo">
         <a href="index.html"><img src="SVG/logo.svg" alt="logo"></a>
@@ -189,12 +232,16 @@
 
     </header>
 
+    <div id="sectionwrapper">
 
-    <button class="sortering filter" data-kategori="alle">Alle</button>
-    <button class="sortering filter" data-kategori="mains">Mains</button>
-    <button class="sortering filter" data-kategori="sides">Sides</button>
-    <button class="sortering filter" data-kategori="drinks">Drinks</button>
+        <button class="sortering filter" data-kategori="alle">Alle</button>
+        <button class="sortering filter" data-kategori="mains">Mains</button>
+        <button class="sortering filter" data-kategori="sides">Sides</button>
+        <button class="sortering filter" data-kategori="drinks">Drinks</button>
 
+    </div>
+
+    <h1>Alle retter</h1>
 
 
     <!--
@@ -252,12 +299,8 @@
                 if (filter == "alle" || filter == ret.kategori) {
                     let template = `
                             <article class="ret">
-                                <h2>${ret.navn}</h2> <br>
-                                <p>${ret.id}</p> <br>
+                                <h2>${ret.id}, ${ret.navn}</h2> <br>
                                 <img src = "pics/${ret.billede}.jpg">
-                                <p>${ret.pris}kr.</p>
-                                <p>${ret.beskrivelse}</p>
-
                             </article>
                         `;
 
@@ -270,7 +313,6 @@
                         document.querySelector("#indhold").innerHTML = `
                         <article class="ret">
                             <h2>${ret.navn}</h2> <br>
-                                <p>${ret.id}</p> <br>
                                 <img src = "pics/${ret.billede}.jpg">
                                 <p>${ret.pris}kr.</p>
                                 <p>${ret.beskrivelse}</p>
@@ -313,6 +355,7 @@
         getJson();
 
     }
+
 </script>
 
 </html>
