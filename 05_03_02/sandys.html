@@ -12,7 +12,7 @@
             background-image: url("pics/rolerblades2.png");
             background-size: cover;
             background-repeat: repeat-y;
-            position: absolute;
+            /*            position: absolute;*/
         }
 
         img {
@@ -74,26 +74,74 @@
             font-size: 1.2em;
             text-align: center;
         }
+
+        /* iPad - On screens that are 768px or more */
+        @media screen and (min-width: 768px) {
+            .overskrift {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1.8em;
+            }
+
+            /*
+            nav {
+                display: flex;
+                justify-content: center;
+            }
+*/
+        }
+
+        /* Desktop - On screens that are 1000px or more */
+        @media screen and (min-width: 1000px) {
+
+            body {
+                background-image: url(pics/rolerblades-stor.png);
+            }
+
+            #logo {
+                width: 30%;
+            }
+
+            .knap {
+                width: 10%;
+            }
+
+            .ramme {
+                width: 30vw;
+                height: 15vh;
+
+            }
+
+            .overskrift {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <div id="logo">
-        <img src="SVG/logo.svg" alt="logo">
+        <a href="index.html"><img src="SVG/logo.svg" alt="logo"></a>
     </div>
 
     <nav>
         <div class="knap">
-            <img src="SVG/sandys-pink.svg" alt="sandys">
+            <a href="sandys.html"><img src="SVG/sandys-pink.svg" alt="sandys"></a>
         </div>
 
         <div class="knap">
-            <img src="SVG/menu.svg" alt="menu">
+            <a href="menu.html"><img src="SVG/menu.svg" alt="menu"></a>
         </div>
 
         <div class="knap">
-            <img src="SVG/kontakt.svg" alt="kontakt">
+            <a href="kontakt.html"><img src="SVG/kontakt.svg" alt="kontakt"></a>
         </div>
     </nav>
 

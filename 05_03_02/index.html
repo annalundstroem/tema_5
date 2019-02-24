@@ -1,42 +1,21 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Sandy's Diner</title>
     <style>
         body {
             margin: 0;
+            background-image: url("pics/bil3.png");
+            background-size: cover;
+            background-repeat: repeat-y;
+            /*            position: absolute;*/
         }
 
         img {
             width: 100%;
-        }
-
-        #baggrundsbillede {
-            background-image: url("pics/bil.jpg");
-            filter: opacity(40%);
-            height: 100vh;
-            width: 100vw;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-
-
-        }
-
-
-
-        #logo {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 90%;
-            position: relative;
-            top: 10vh;
-
         }
 
         #logo {
@@ -75,6 +54,63 @@
             position: relative;
             top: 35vh;
         }
+
+
+        /* iPad - On screens that are 768px or more */
+        @media screen and (min-width: 768px) {
+            #logo {
+                width: 80%;
+            }
+
+
+            #sandys {
+                width: 30%;
+            }
+
+            #menu {
+                width: 30%;
+            }
+
+            #kontakt {
+                width: 30%;
+            }
+
+        }
+
+        /* Desktop - On screens that are 1920px or more */
+        @media screen and (min-width: 1000px) {
+
+            body {
+                background-image: url("pics/bil2.png");
+            }
+
+            #logo {
+                width: 60%;
+            }
+
+            nav {
+                display: flex;
+                position: relative;
+                top: 30vh
+            }
+
+            #sandys {
+                top: 0vh;
+                width: 15%;
+
+            }
+
+            #menu {
+                top: 0vh;
+                width: 15%;
+            }
+
+            #kontakt {
+                top: 0vh;
+                width: 15%;
+            }
+
+        }
     </style>
 </head>
 
@@ -82,22 +118,27 @@
     <div id="baggrundsbillede"></div>
 
     <div id="logo">
-        <img src="SVG/logo.svg" alt="logo">
-    </div>
-
-    <div id="sandys">
-        <img src="SVG/sandys.svg" alt="sandys">
-    </div>
-
-    <div id="menu">
-        <img src="SVG/menu.svg" alt="menu">
-    </div>
-
-    <div id="kontakt">
-        <img src="SVG/kontakt.svg" alt="kontakt">
+        <a href="index.html"><img src="SVG/logo.svg" alt="logo"></a>
     </div>
 
 
+    <nav>
+
+
+
+        <div id="sandys">
+            <a href="sandys.html"><img src="SVG/sandys.svg" alt="sandys"></a>
+        </div>
+
+        <div id="menu">
+            <a href="menu.html"><img src="SVG/menu.svg" alt="menu"></a>
+        </div>
+
+        <div id="kontakt">
+            <a href="kontakt.html"><img src="SVG/kontakt.svg" alt="kontakt"></a>
+        </div>
+
+    </nav>
 
 
 

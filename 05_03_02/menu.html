@@ -12,7 +12,7 @@
             background-image: url("pics/bus3.png");
             background-size: cover;
             background-repeat: repeat-y;
-            position: absolute;
+            /*            position: absolute;*/
 
         }
 
@@ -21,20 +21,6 @@
 
         }
 
-        /*
-        #baggrundsbillede {
-            background-image: url("pics/bus2.jpg");
-            filter: opacity(40%);
-            width: 100vw;
-            height: 100vh;
-            background-position: center;
-            background-repeat: repeat-y;
-            background-size: cover;
-            position: absolute;
-
-
-        }
-*/
 
         #logo {
             display: block;
@@ -87,20 +73,53 @@
             font-size: 1.5rem;
         }
 
-        /* On screens that are 992px or less, set the background color to blue */
+        /* iPad - On screens that are 768px or more */
         @media screen and (min-width: 768px) {
-
-            #logo {
-                width: 40%;
+            .overskrift {
+                font-size: 3em;
             }
 
-            nav {
-                display: flex;
+            p {
+                font-size: 1.8em;
+            }
+
+        }
+
+        /* Desktop - On screens that are 1000px or more */
+        @media screen and (min-width: 1000px) {
+
+            body {
+                background-image: url(pics/bus-stor.png);
+            }
+
+
+            #logo {
+                width: 30%;
+
+            }
+
+            .knap {
+                width: 10%;
             }
 
             #sectionwrapper {
                 display: flex;
+                justify-content: center;
+
             }
+
+            .ramme {
+                width: 20vw;
+                padding: 2vw;
+                height: 15vh;
+
+            }
+
+            .overskrift {
+                font-size: 2.5em;
+            }
+
+
         }
     </style>
 
@@ -111,21 +130,21 @@
     <div id="baggrundsbillede"></div>
 
     <div id="logo">
-        <img src="SVG/logo.svg" alt="logo">
+        <a href="index.html"><img src="SVG/logo.svg" alt="logo"></a>
     </div>
 
     <nav>
 
         <div class="knap">
-            <img src="SVG/sandys.svg" alt="sandys">
+            <a href="sandys.html"><img src="SVG/sandys.svg" alt="sandys"></a>
         </div>
 
         <div class="knap">
-            <img src="SVG/menu-pink.svg" alt="menu">
+            <a href="menu.html"><img src="SVG/menu-pink.svg" alt="menu"></a>
         </div>
 
         <div class="knap">
-            <img src="SVG/kontakt.svg" alt="kontakt">
+            <a href="kontakt.html"><img src="SVG/kontakt.svg" alt="kontakt"></a>
         </div>
 
     </nav>
