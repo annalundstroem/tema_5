@@ -76,6 +76,7 @@
             height: auto;
             background-color: #e0d6bc;
         }
+
     </style>
 </head>
 
@@ -98,6 +99,7 @@
             <button class="filter" data-kategori="desserter">Desserter</button>
             <button class="filter" data-kategori="sideorders">Sideorders</button>
             <button class="filter" data-kategori="drikkevarer">Drikkevarer</button>
+
 
 
         </nav>
@@ -135,7 +137,7 @@
                                 <p>${ret.id}</p> <br>
                                 <img src = "small/${ret.billede}-sm.jpg">
                                 <p>${ret.pris}</p>
-                                <p>${ret.kort}</p>
+                                <p>${ret.beskrivelse}</p>
                                 <p>${ret.oprindelse}</p>
 
                             </article>
@@ -193,6 +195,7 @@
             getJson();
 
         }
+
     </script>
 </body>
 

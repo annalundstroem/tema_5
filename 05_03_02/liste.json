@@ -1,0 +1,146 @@
+[{
+        "id": "1",
+        "kategori": "mains",
+        "navn": "Klassisk cheeseburger",
+        "pris": "69",
+        "beskrivelse": "Klassisk cheeseburger med oksebøf, tomat, salat, syltede agurker og løg",
+        "billede": "burger"
+},
+
+    {
+        "id": "2",
+        "kategori": "mains",
+        "navn": "Chicken burger",
+        "pris": "69",
+        "beskrivelse": "Chicken burger med coleslaw, syltede agurker og hjemmelavet mayo",
+        "billede": "chickenburger"
+
+},
+
+    {
+        "id": "3",
+        "kategori": "mains",
+        "navn": "Linseburger",
+        "pris": "69",
+        "beskrivelse": "Linseburger med tzatziki, feta, avocado, radisser og syltede løg",
+        "billede": "linseburger"
+
+ },
+
+    {
+        "id": "4",
+        "kategori": "mains",
+        "navn": "Vegetarburger",
+        "pris": "69",
+        "beskrivelse": "Vegetarburger med bøf lavet af kikærter og bønner. Hertil tomat, avocado og hvidløgsdressing",
+        "billede": "vegetarianburger"
+
+ },
+
+    {
+        "id": "5",
+        "kategori": "mains",
+        "navn": "Tofuburger",
+        "pris": "69",
+        "beskrivelse": "Tofuburger med avocado, agurk, persille og syltede løg",
+        "billede": "tofuburger"
+
+ },
+
+    {
+        "id": "6",
+        "kategori": "sides",
+        "navn": "Klassiske fries",
+        "pris": "29",
+        "beskrivelse": "Klassiske pommes fritter",
+        "billede": "fries"
+},
+
+    {
+        "id": "7",
+        "kategori": "sides",
+        "navn": "Hvidløgsfries",
+        "pris": "29",
+        "beskrivelse": "Pommes fritter med hvidløg",
+        "billede": "garlicfries"
+
+},
+
+    {
+        "id": "8",
+        "kategori": "sides",
+        "navn": "Sweet potato fries",
+        "pris": "29",
+        "beskrivelse": "Pommes fritter lavet af sød kartoffel",
+        "billede": "sweetpotatofries"
+
+ },
+
+    {
+        "id": "9",
+        "kategori": "sides",
+        "navn": "Chili cheese tops",
+        "pris": "29",
+        "beskrivelse": "Fritterede chili cheese tops",
+        "billede": "chilicheese"
+
+ },
+
+    {
+        "id": "10",
+        "kategori": "sides",
+        "navn": "Side salat",
+        "pris": "29",
+        "beskrivelse": "Simpel salat med avocado, agurk, løg og radisser",
+        "billede": "sidesalat"
+
+ },
+
+    {
+        "id": "11",
+        "kategori": "drinks",
+        "navn": "Vanilje milkshake",
+        "pris": "39",
+        "beskrivelse": "Vanilje milkshake lavet på økologisk vanilleis, fløde og vanilje sirup",
+        "billede": "vanillamilkshake2"
+},
+
+    {
+        "id": "12",
+        "kategori": "drinks",
+        "navn": "Jordbær milkshake",
+        "pris": "39",
+        "beskrivelse": "Jordbær milkshake lavet på økologisk jordbæris, hjemmelavet marmelade, fløde og jordbær monin",
+        "billede": "strawberrymilkshake"
+
+},
+
+    {
+        "id": "13",
+        "kategori": "drinks",
+        "navn": "Chokolade milkshake",
+        "pris": "39",
+        "beskrivelse": "Chokolade milkshake lavet på økologisk chokoladeis, chokoladekage og kold kakao",
+        "billede": "chocolatemilkshake"
+
+ },
+
+    {
+        "id": "14",
+        "kategori": "drinks",
+        "navn": "Sodavand",
+        "pris": "35",
+        "beskrivelse": "Vælg mellem Cola, Fanta og Sprite",
+        "billede": "sodavand"
+
+ },
+
+    {
+        "id": "15",
+        "kategori": "drinks",
+        "navn": "Isvand",
+        "pris": "20",
+        "beskrivelse": "Isvand med citron, agurk og mynte",
+        "billede": "icewater"
+
+ }]
