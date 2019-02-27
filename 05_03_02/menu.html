@@ -9,16 +9,20 @@
     <style>
         body {
             margin: 0;
-            background-image: url("pics/bus3.png");
+            background-image: url("pics/menu_mobile.jpg");
             background-size: cover;
-            background-repeat: repeat-y;
-            /*            position: absolute;*/
-
+            /*background-repeat: repeat-y;*/
+            position: absolute;
         }
 
         img {
             width: 100%;
 
+        }
+
+        #liste img {
+            width: 60%;
+            margin-bottom: 7vh;
         }
 
         h1 {
@@ -117,7 +121,8 @@
         }
 
         #liste {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.91);
+            text-align: center;
             /*
             display: grid;
             grid-template-columns: 10fr 10fr 10fr 10fr;
@@ -140,7 +145,13 @@
         @media screen and (min-width: 1000px) {
 
             body {
-                background-image: url(pics/bus-stor.png);
+                background-image: url(pics/menu_desktop.png);
+                height: 100%;
+                width: 100vw;
+
+
+
+
             }
 
 
@@ -163,6 +174,7 @@
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
+                margin-bottom: 5vh;
 
             }
 
@@ -193,7 +205,6 @@
             }
 
         }
-
     </style>
 
 </head>
@@ -300,7 +311,7 @@
                     let template = `
                             <article class="ret">
                                 <h2>${ret.id}, ${ret.navn}</h2> <br>
-                                <img src = "pics/${ret.billede}.jpg">
+                                <img src = "pics/${ret.billede}.png">
                             </article>
                         `;
 
@@ -355,7 +366,6 @@
         getJson();
 
     }
-
 </script>
 
 </html>
